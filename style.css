@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width:100vw;
+    height:100vh;
+    background-image: url("https://media.istockphoto.com/id/1139402489/vector/abstract-modern-background.jpg?s=612x612&w=0&k=20&c=GAkYFnGct6FJJdPFF-EfP3KGkQ5p0g7tAA8gAUYuYwI=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 400px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter:blur(10px);
+    border-radius: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2 
+{
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px 0;
+    font-family: 'Segoe UI', Arial, sans-serif; /* Changed font */
+    letter-spacing: 1px; /* Optional: improves appearance */
+}
+.form-group{
+    position: relative;
+    width: 300px;
+    border-bottom:3px solid #fff;
+    margin: 30px 0;
+}
+.form-group input{
+    width: 100%;
+    padding: 50px;
+    background: transparent;
+    border: none;
+    outline:none;
+    font-size:1.2em;
+    color: #fff;
+    padding:0 30px 0 10px;
+}
+.form-group label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.2em;
+    transition:0.5s;
+    
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+    
+}
+.form-group i
+{
+    position: absolute;
+    top: 50%;
+    right:20px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.2em;
+}
+p{
+    text-align:center;
+    color: #fff;
+    padding: 10px 0;
+}
+p>a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+p>a:hover{
+    text-decoration: underline;
+    font-style:italic;
+}
+#btn
+{
+    width:80px;              /* Reduced width */
+    height: 40px;            /* Reduced height */
+    border-radius:40px;
+    border:none;
+    font-size:1.1em;         /* Slightly smaller font */
+    text-transform: uppercase;
+    font-weight:600;
+    margin:20px auto 0 auto; /* Center horizontally and add top margin */
+    display: block;          /* Ensure button is block-level for centering */
+    cursor:pointer;
+    transition:0.5s;
+}
+#btn:hover{
+    background-color:rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: 10px 0 0 0;
+    color: #fff; /* Make text white */
+}
+
+.remember-forgot a {
+    color: #fff; /* Make link white */
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+    font-style:italic;
+}
