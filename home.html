@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthMate+ Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!--Navbar-->
+    <header class="navbar">
+        <div class="logo">HealthMate<span class="plus">+</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#">Dashboard</a>
+            <a href="#">AI Assistant</a>
+            <a href="login.html">Logout</a>
+
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-left">
+            <span class="tag">⚡ AI-Powered Health Assistant</span>
+            <h1>Welcome to <strong>HealthMate+</strong></h1>
+            <p class="hero-sub">Your intelligent companion for health tracking, fitness guidance, and wellness insights.</p>
+            <button class="primary-btn">Start Health Assessment</button>
+        </div>
+        <div class="hero-right">
+            <div class="image-box" aria-hidden="true"></div>
+        </div>
+    </section>
+    <section class="overview">
+        <h2>Today's Health Overview</h2>
+        <p class="overview-sub">Track your daily wellness metrics and progress</p>
+    </section>
+    <div class="cards-grid">
+    <!-- Card 1 -->
+        <div class="card">
+            <div class="card-icon">👣</div>
+            <h3>Steps Today</h3>
+            <p class="card-value"><span id="steps">0</span> <small>steps</small></p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-icon">❤️</div>
+            <h3>Resting Heart Rate</h3>
+            <p class="card-value"><span id="heart">--</span> <small>bpm</small></p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-icon">💧</div>
+            <h3>Water Intake</h3>
+            <p class="card-value"><span id="water">0</span> <small>glasses</small></p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+        <div class="card-icon">🛌</div>
+        <h3>Sleep Quality</h3>
+        <p class="card-value"><span id="sleep">0</span> <small>hours</small></p>
+        </div>
+    </div>
+    <section class="insights">
+        <h2>AI Health Insights</h2>
+        <div class="insight-list">
+            <div class="insight">
+                <strong>Great progress on your daily steps!</strong>
+                <p>You're 85% towards your daily goal of 10,000 steps.</p>
+            </div>
+            <div class="insight">
+                <strong>Stay hydrated throughout the day</strong>
+                <p>Aim for 2-3 more glasses of water before evening.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <p>© 2025 HealthMate+</p>
+    </footer>
+
+
+
+</body>
+</html>
