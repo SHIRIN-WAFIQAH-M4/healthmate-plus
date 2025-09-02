@@ -10,7 +10,7 @@
     apiKey: "AIzaSyBQd4haKl9uM_5QEij9eIC_EcUtk__bePg",
     authDomain: "healthmate-plus.firebaseapp.com",
     projectId: "healthmate-plus",
-    storageBucket: "healthmate-plus.firebasestorage.app",
+    storageBucket: "healthmate-plus.appspot.com",
     messagingSenderId: "889465878945",
     appId: "1:889465878945:web:a952a8e490919b192173e0",
     measurementId: "G-P4Y9EK2L02"

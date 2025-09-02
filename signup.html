@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Signup</title>
   <link rel="stylesheet" href="style.css">
-  <script type="module" src="register.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -29,13 +28,66 @@
       </div>
       <button id="btn" type="submit">Signup</button>
     </form>
-    <p>Already have an account?  <a href="index.html">Login</a></p>
+    <p>Already have an account? <a href="index.html">Login</a></p>
   </div>
-  <script>
-document.getElementById('signupForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  window.location.href = 'home.html';
-});
-</script>
+
+  <!-- Firebase Signup Logic -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } 
+      from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+    import { getFirestore, setDoc, doc } 
+      from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+    // Your Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyB...",
+      authDomain: "healthmate-plus.firebaseapp.com",
+      projectId: "healthmate-plus",
+      storageBucket: "healthmate-plus.appspot.com",
+      messagingSenderId: "889465878945",
+      appId: "1:889465878945:web:a952a8e490919b192173e0",
+      measurementId: "G-P4Y9EK2L02"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    // Signup function
+    document.getElementById("signupForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      try {
+        // Create user with Firebase Auth
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+
+        // Save extra user info in Firestore
+        await setDoc(doc(db, "users", user.uid), {
+          username: username,
+          email: email,
+          createdAt: new Date()
+        });
+
+        alert("Signup successful!");
+        window.location.href = "home.html"; // redirect after signup
+      } catch (error) {
+        alert("Signup failed: " + error.message);
+        console.error(error);
+      }
+    });
+  </script>
 </body>
 </html>

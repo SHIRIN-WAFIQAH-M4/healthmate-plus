@@ -27,7 +27,7 @@
                 <label><input type="checkbox"> Remember me</label>
                 <a href="#">Forgot password?</a>
             </div>
-            <input id="loginBtn" type="button" value="Login">
+            <button id="btn" type="submit">Login</button>
             <p>Don't have an account? <a href="signup.html">Register</a></p>
         </form>
     </div>
@@ -55,7 +55,8 @@
         const auth = getAuth(app);
 
         // Login function
-        document.getElementById("loginBtn").addEventListener("click", async () => {
+        document.getElementById("btn").addEventListener("click", async (e) => {
+            e.preventDefault(); // Prevent form submission
             const email = document.getElementById("loginEmail").value;
             const password = document.getElementById("loginPassword").value;
 
