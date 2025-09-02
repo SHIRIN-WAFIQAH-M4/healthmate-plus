@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Login/Signup</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <input type="email" id="loginEmail" required>
+                <label for="loginEmail">Email</label>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="form-group">
+                <input type="password" id="loginPassword" required>
+                <label for="loginPassword">Password</label>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <input id="loginBtn" type="button" value="Login">
+            <p>Don't have an account? <a href="signup.html">Register</a></p>
+        </form>
+    </div>
+
+    <!-- Firebase Login Logic -->
+    <script type="module">
+        // Import Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } 
+            from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+        // Your Firebase config
+        const firebaseConfig = {
+            apiKey: "AIzaSyB...",
+            authDomain: "healthmate-plus.firebaseapp.com",
+            projectId: "healthmate-plus",
+            storageBucket: "healthmate-plus.appspot.com",
+            messagingSenderId: "889465878945",
+            appId: "1:889465878945:web:a952a8e490919b192173e0",
+            measurementId: "G-P4Y9EK2L02"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Login function
+        document.getElementById("loginBtn").addEventListener("click", async () => {
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+
+            try {
+                await signInWithEmailAndPassword(auth, email, password);
+                alert("Login successful!");
+                window.location.href = "home.html"; // redirect after login
+            } catch (error) {
+                alert("Login failed: " + error.message);
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>
