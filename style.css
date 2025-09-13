@@ -129,3 +129,14 @@ p>a:hover{
     text-decoration: underline;
     font-style:italic;
 }
+input {
+    border: 1px solid #ccc;  
+    padding: 8px;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;             
+    border-color: #66cc99;      
+    box-shadow: 0 0 5px #66cc99; 
+}
