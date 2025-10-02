@@ -30,14 +30,13 @@ body{
     justify-content: center;
     align-items: center;
 }
-h2 
-{
+h2 {
     font-size: 2em;
     color: #fff;
     text-transform: uppercase;
     padding: 20px 0;
-    font-family: 'Segoe UI', Arial, sans-serif; /* Changed font */
-    letter-spacing: 1px; /* Optional: improves appearance */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1px;
 }
 .form-group{
     position: relative;
@@ -47,14 +46,23 @@ h2
 }
 .form-group input{
     width: 100%;
-    padding: 50px;
     background: transparent;
     border: none;
-    outline:none;
-    font-size:1.2em;
+    outline: none;
+    font-size: 1.2em;
     color: #fff;
-    padding:0 30px 0 10px;
+    padding: 0 30px 0 10px;
 }
+
+/* ✅ Remove browser blue focus outline completely */
+.form-group input:focus,
+.form-group input:focus-visible,
+.form-group input:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
 .form-group label{
     position: absolute;
     top: 50%;
@@ -63,15 +71,12 @@ h2
     color: #fff;
     font-size: 1.2em;
     transition:0.5s;
-    
 }
 input:focus ~ label,
 input:valid ~ label{
     top: -5px;
-    
 }
-.form-group i
-{
+.form-group i {
     position: absolute;
     top: 50%;
     right:20px;
@@ -93,17 +98,16 @@ p>a:hover{
     text-decoration: underline;
     font-style:italic;
 }
-#btn
-{
-    width:80px;              /* Reduced width */
-    height: 40px;            /* Reduced height */
+#btn {
+    width:80px;
+    height: 40px;
     border-radius:40px;
     border:none;
-    font-size:1.1em;         /* Slightly smaller font */
+    font-size:1.1em;
     text-transform: uppercase;
     font-weight:600;
-    margin:20px auto 0 auto; /* Center horizontally and add top margin */
-    display: block;          /* Ensure button is block-level for centering */
+    margin:20px auto 0 auto;
+    display: block;
     cursor:pointer;
     transition:0.5s;
 }
@@ -117,26 +121,15 @@ p>a:hover{
     align-items: center;
     width: 300px;
     margin: 10px 0 0 0;
-    color: #fff; /* Make text white */
+    color: #fff;
 }
 
 .remember-forgot a {
-    color: #fff; /* Make link white */
+    color: #fff;
     text-decoration: none;
 }
 
 .remember-forgot a:hover {
     text-decoration: underline;
     font-style:italic;
-}
-input {
-    border: 1px solid #ccc;  
-    padding: 8px;
-    border-radius: 5px;
-}
-
-input:focus {
-    outline: none;             
-    border-color: #66cc99;      
-    box-shadow: 0 0 5px #66cc99; 
 }
