@@ -24,7 +24,7 @@ body {
 
 h1 {
     margin-bottom: 20px;
-    color: #0088cc;
+    color: #38b2ac;
 }
 
 .question {
@@ -51,7 +51,7 @@ label {
 
 label:hover {
     background: #f0f8ff;
-    border-color: #00aaff;
+    border-color: #38b2ac;
 }
 
 input[type="radio"] {
@@ -64,7 +64,7 @@ button {
     padding: 12px 20px;
     width: 100%;
     border: none;
-    background: #0099cc;
+    background: #38b2ac;
     color: white;
     font-size: 18px;
     cursor: pointer;
@@ -73,7 +73,7 @@ button {
 }
 
 button:hover {
-    background: #0077aa;
+    background: #0ec067;
 }
 
 #report {
