@@ -1,202 +1,255 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI",Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
+
 body {
     background-color: #f8fbfd;
     color: #222;
     line-height: 1.6;
 }
+
+/* ---------------- Navbar ---------------- */
 .navbar {
-    background:#fff;
-    display:flex;
+    background: #fff;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    position:sticky;
+    position: sticky;
     top: 0;
     z-index: 100;
 }
+
 .logo {
     font-size: 1.4rem;
     font-weight: 700;
     color: #111;
 }
+
 .logo .plus {
     color: #20c997;
 }
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
 .nav-links a {
     margin-left: 20px;
     text-decoration: none;
     color: #333;
-    font-weight: 0.95rem;
-    padding:8px 14px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 14px;
     border-radius: 8px;
-    transition:0.3s;
+    transition: 0.3s ease;
 }
+
 .nav-links a:hover {
     background-color: #e6f9f1;
     color: #20c997;
 }
+
+.profile-icon img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #20c997;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.profile-icon img:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 0px 8px rgba(32, 201, 151, 0.4);
+}
+
+/* ---------------- Hero Section ---------------- */
 .hero {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     padding: 60px 80px;
     background: linear-gradient(135deg, #38b2ac, #4fd1c5);
     color: #fff;
     border-radius: 0 0 30px 30px;
 }
+
 .hero-left {
     max-width: 50%;
 }
+
 .tag {
-    background:rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.85rem;
-    display:inline-block;
+    display: inline-block;
     margin-bottom: 20px;
 }
-.her0 h1{
-    font-size:2.8rem;
+
+.hero h1 {
+    font-size: 2.8rem;
     margin-bottom: 20px;
 }
+
 .hero-sub {
-    font-size:1.1rem;
+    font-size: 1.1rem;
     margin-bottom: 25px;
 }
+
 .primary-btn {
     background: #fff;
     color: #20c997;
-    border:none;
+    border: none;
     padding: 14px 28px;
-    font-size:1rem;
-    font-weight:600;
-    border-radius:10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
     cursor: pointer;
-    transition:0.3s;
+    transition: 0.3s;
 }
+
 .primary-btn:hover {
-    background:#e6f9f1;
+    background: #e6f9f1;
 }
+
 .hero-right .image-box {
-    width : 380px;
+    width: 380px;
     height: 260px;
     background: url("https://media.istockphoto.com/id/1469304360/vector/cartoon-character-of-doctor-holding-a-clipboard-on-light-blue-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=fuBqFFjMU4eb1qbs10lruSvuEaMwSjftHkqh14k2pyM=") center/cover no-repeat;
     border-radius: 20px;
 }
+
+/* ---------------- Overview ---------------- */
 .overview {
-    text-align:center;
+    text-align: center;
     padding: 50px 20px 20px;
 }
+
 .overview h2 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    font-weight:700;
+    font-weight: 700;
 }
+
 .overview-sub {
-    color:#555;
-    font-size:1rem;
+    color: #555;
+    font-size: 1rem;
 }
+
+/* ---------------- Cards ---------------- */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
-    margin-top: 20px 40px;
+    padding: 0 40px;
+    margin-top: 20px;
 }
+
 .card {
-    background:#fff;
+    background: #fff;
     border-radius: 16px;
     padding: 25px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease,box-shadow 0.3s ease;
+    transition: 0.3s;
 }
-.card:hpver {
+
+.card:hover {
     transform: translateY(-6px);
     box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
+
 .card-icon {
     font-size: 2rem;
     margin-bottom: 10px;
 }
-.card h3{
-    font-size:1.1rem;
+
+.card h3 {
+    font-size: 1.1rem;
     margin-bottom: 10px;
 }
+
 .card-value {
     font-size: 1.4rem;
     font-weight: bold;
     color: #111;
 }
+
 .card-value small {
     font-weight: normal;
     color: #777;
     font-size: 0.85rem;
 }
+
 /* ---------------- Insights ---------------- */
 .insights {
-  background: #f0faf9;
-  margin: 40px;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    background: #f0faf9;
+    margin: 40px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
 .insights h2 {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-  color: #111;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #111;
 }
 
 .insight-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .insight {
-  background: #fff;
-  padding: 15px 20px;
-  border-radius: 12px;
-  border-left: 5px solid #20c997;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border-left: 5px solid #20c997;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
 
 .insight strong {
-  display: block;
-  margin-bottom: 5px;
-  color: #222;
+    display: block;
+    margin-bottom: 5px;
+    color: #222;
 }
+
 /* ---------------- Footer ---------------- */
 .site-footer {
-  background: #fff;
-  text-align: center;
-  padding: 20px;
-  color: #666;
-  font-size: 0.9rem;
-  margin-top: 40px;
-  border-top: 1px solid #eee;
+    background: #fff;
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
 }
+
 /* ---------------- Responsive ---------------- */
 @media (max-width: 992px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-  }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
 
-  .hero-left {
-    max-width: 100%;
-    margin-bottom: 25px;
-  }
+    .hero-left {
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
 
-  .hero-right .image-box {
-    width: 100%;
-    height: 220px;
-  }
+    .hero-right .image-box {
+        width: 100%;
+        height: 220px;
+    }
 }
-
