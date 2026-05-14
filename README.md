@@ -7,6 +7,7 @@ HealthMate+ – AI-powered symptom checker and fitness assistant
 - Fitness Tracking
 - Health Insights Dashboard
 - Profile Management
+- 
 #Tech Stack:
 - Frontend:HTML,CSS,JavaScript
 - Backend:Node.js + Express
